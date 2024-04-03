@@ -3,7 +3,7 @@ module.exports = function (app) {
   app.use(
     ["/api", "/auth/google"],
     createProxyMiddleware({
-      target: "https://questiony.onrender.com",
+      target: "http://localhost:5000",
     })
   );
 };

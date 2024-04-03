@@ -10,7 +10,7 @@ const Payments = (actions) => {
             description='5$ for 5 email credits'
             amount={500}
             token={token => actions.handleToken(token)}
-            stripeKey={process.env.REACT_APP_STRIPE_KEY}
+            stripeKey={process.env.stripePublishableKey}
         >
             <button className='btn '>Add Credits</button>
         </StripeCheckout>)   
