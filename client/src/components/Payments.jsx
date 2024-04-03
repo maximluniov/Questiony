@@ -12,7 +12,7 @@ const Payments = (actions) => {
             token={token => actions.handleToken(token)}
             stripeKey={process.env.REACT_APP_STRIPE_KEY}
         >
-            <button className='btn '>Add Credits</button>
+            <button className='btn'>Add Credits</button>
         </StripeCheckout>)   
 }
 
