@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.scaling {
+    transition: transform 0.3s ease;
+  }
+
+  .scaling:hover {
+    transform: scale(1.01);
+  }
+
+  .showUp {
+    opacity: 0; /* Initially hidden */
+    animation: fadeIn 0.5s ease forwards; /* Animation declaration */
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
