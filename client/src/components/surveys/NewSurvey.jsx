@@ -14,11 +14,7 @@ export const FIELDS = [
 const NewSurvey = () => {
   const [page, setPage] = useState(false);
   return (
-    <div className='my-32 mx-40'>
-      <h3>
-        Creating a survey
-      </h3>
-
+    <div className='mt-24 mx-40'>
       {
         !page ?
           <SurveyForm turnPage={() => setPage(true)} /> :

@@ -6,8 +6,7 @@ class SurveysList extends Component {
 
 
     componentDidMount(){
-            this.props.fetchSurveys()
-            // .catch((err)=>{window.location='/auth/google' })        
+            this.props.fetchSurveys().catch((err)=>{window.location='/login' })        
     }
 
 

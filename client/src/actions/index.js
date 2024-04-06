@@ -21,5 +21,4 @@ export const createSurvey = (values, navigate) => async dispatch => {
 export const fetchSurveys = () => async dispatch => {
         const res = await axios.get('/api/surveys');
         dispatch({ type: FETCH_SURVEYS, payload: res.data })
-    
 }

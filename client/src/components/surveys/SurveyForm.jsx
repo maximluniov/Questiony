@@ -10,26 +10,22 @@ const SurveyForm = (form) => {
 
 
     return (
-        <form onSubmit={form.handleSubmit(() => form.turnPage()) } className='my-20  flex-col gap-y-10' >
-
+        <form onSubmit={form.handleSubmit(() => form.turnPage()) } className='flex flex-col gap-y-10 w-2/3' >
+            <h3>
+        Creating a survey
+      </h3>
 
             {
-                FIELDS.map((field,index)=>(
-                    index !==3?
-                    <Field type='text' label={field.label} name={field.name} component={SurveyField} key={field.name} />:
-                <Field type='text' label={field.label} name={field.name} component={SurveyField} key={field.name} />
-                     
-                
-                    
-                    
+                FIELDS.map((field)=>(
+                    <Field type='text' label={field.label} name={field.name} component={SurveyField} key={field.name} />
                 ))
             }
 
             
-
+            <div>
             <Link to='/surveys' className='red btn-flat white-text'>CANCEL <i className='material-icons right'>cancel</i></Link>
-
             <button type='submit' className='teal btn-flat right white-text'  >Next <i className='material-icons right'>arrow_forward</i></button>
+            </div>
 
         </form>
     )

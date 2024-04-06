@@ -4,12 +4,16 @@ import Landing from './components/Landing'
 import Dashbord from './components/Dashbord'
 import NewSurvey from './components/surveys/NewSurvey'
 import Documentation from './components/Documentation';
+import Login from './components/Login'
 
 import { connect } from 'react-redux'
 import * as actions from './actions'
 import { useEffect } from 'react'
 
 const App = (actions) => {
+
+
+ 
 
   useEffect(() => {
     actions.fetchUser();
@@ -24,11 +28,15 @@ const App = (actions) => {
           <Route exact path='/surveys' Component={Dashbord} />
           <Route exact path='/surveys/new' Component={NewSurvey} />
           <Route path='/documentation' Component={Documentation} />
+          <Route path='/login' Component={Login} />
         </Route>
       </Routes> 
     </>
   );
 
 }
+
+
+
 
 export default connect(null, actions)(App);

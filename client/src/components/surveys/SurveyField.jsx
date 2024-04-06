@@ -5,8 +5,8 @@ const SurveyField = ({ input, label, meta: { error, touched } }) => {
         <div className='flex flex-col h-28'>
             
             <label>{label}</label>
-            <input {...input} type="text" autoComplete='off' className='h-20' />
-            <p className='red-text mb-[5px]'>{touched && error}</p>
+            <input {...input} type="text" autoComplete='off' />
+            <p className='red-text mb-[5px] break-words'>{touched && error}</p>
         </div>
     )
 }

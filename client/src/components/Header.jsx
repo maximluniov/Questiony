@@ -20,7 +20,7 @@ const Header = ({ auth }) => {
                     {
                         auth === null ? "" :
                             (!auth ?
-                                <a className='text-white hover:text-slate-200' href="/auth/google">Log in / Sign Up  with Google</a> :
+                                <Link className='text-white hover:text-slate-200' to='/login'>Log in / Sign Up  with Google</Link> :
                                 (<>
                                     <div>Credits:{auth.credits}</div>
                                     <Payments ><button className='btn' >Add Credits</button></Payments>
